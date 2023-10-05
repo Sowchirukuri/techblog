@@ -1,0 +1,46 @@
+<!-- blogPost.handlebars (Handlebars Template for blogPost.js) -->
+
+<div class="row post">
+  <div class="col post-header">
+    <!-- Blog Post Title with Link -->
+    <h2 class="post-title">
+      <a href="/blogPost/{{id}}">{{title}}</a>
+    </h2>
+
+    <!-- Post Author and Creation Date -->
+    <p>Posted by {{user.username}} on {{format_date date_created}}</p>
+  </div>
+
+  <!-- Blog Post Content -->
+  <p class="blogpost-content">
+    {{content}}
+  </p>
+</div>
+
+<!-- Include the Comment Details Partial -->
+{{> comment-details}}
+
+<!-- Conditional Rendering: Comment Form If User Is Logged In -->
+{{#if logged_in}}
+<div class="row comment-form">
+  <form class="form addComment-form" data-id="{{id}}">
+    <!-- Comment Input Label -->
+    <div class="form-group">
+      <label for="comment">Comment</label>
+    </div>
+
+    <!-- Comment Textarea Input -->
+    <div class="form-group">
+      <textarea class="form-input" type="text" rows="5" id="content" required></textarea>
+    </div>
+
+    <!-- Submit Button for Adding Comments -->
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit" id="submit-comment">Submit</button>
+    </div>
+  </form>
+</div>
+{{/if}}
+
+<!-- Include the JavaScript File for Interactivity -->
+<script src="../js/blogPost.js"></script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Edit Post Section -->
+    <div class="editPost">
+        <!-- Edit Post Form -->
+        <form class="editPost-form" data-id="{{postid}}">
+            <!-- Section Title -->
+            <div class="form-group">
+                <h3>Edit Post</h3>
+            </div>
+
+            <!-- Title Input Field -->
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input class="form-input" type="text" id="update-title" />
+            </div>
+
+            <!-- Content Textarea Field -->
+            <div class="form-group">
+                <label for="Content">Content</label>
+                <textarea class="form-input" type="text" rows="5" id="update-content"></textarea>
+            </div>
+
+            <!-- Update Button -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" id="update-post">Update Post</button>
+            </div>
+        </form>
+
+        <!-- Delete Button -->
+        <button class="btn btn-primary" type="click" id="delete-post" data-id="{{postid}}">Delete</button>
+    </div>
+
+    <!-- Include JavaScript for Interactivity -->
+    <script src="../js/editPost.js"></script>
+</body>
+</html>

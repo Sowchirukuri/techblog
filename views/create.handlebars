@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+   
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <!-- Create New Post Section -->
+    <div class="createPost">
+        <h3>Create New Post</h3>
+        <!-- Create Post Form -->
+        <form class="form createPost-form">
+            <!-- Title Input Field -->
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input class="form-input" type="text" id="title" required />
+            </div>
+
+            <!-- Content Textarea Field -->
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-input" type="text" rows="5" id="content" required></textarea>
+            </div>
+
+            <!-- Create Button -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit" id="createBtn">Create</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- New Post Link -->
+    <div class="newPost">
+        <a href="/create" class="btn btn-primary">+ New Post</a>
+    </div>
+
+    <!-- Include JavaScript for Interactivity -->
+    <script src="./js/create.js"></script>
+</body>
+</html>

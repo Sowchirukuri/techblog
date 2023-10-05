@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header: Your Dashboard -->
+    <h1>Dashboard</h1>
+
+    <!-- Dashboard Section -->
+    <div class="dashboard">
+        <!-- Iterate through Each Blog Post -->
+        {{#each blogposts as |blogPost|}}
+        <div class="col-md-8 post">
+            <!-- Post Header -->
+            <div class="row post-header">
+                <!-- Post Title with Edit Link -->
+                <h2>
+                    <a href="/edit/{{blogPost.id}}">{{blogPost.title}}</a>
+                </h2>
+
+                <!-- Post Author and Creation Date -->
+                <p>Posted by {{blogPost.user.name}} on {{format_date blogPost.date_created}}</p>
+            </div>
+            <!-- End of Post Header -->
+        </div>
+        {{/each}}
+        <!-- End of Iterating through Blog Posts -->
+
+        <!-- New Post Link -->
+        <div class="newPost">
+            <a href="/create" class="btn">+ New Post</a>
+        </div>
+    </div>
+    <!-- End of Dashboard Section -->
+
+    <!-- Include JavaScript or additional resources if needed -->
+</body>
+</html>
